@@ -85,6 +85,15 @@
       document.querySelector('.left-content').appendChild(img1);
       img1.src = 'https://picsum.photos/200';
       img1.className = 'small-image';
+
+      let lista = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      let ul = document.createElement('ul');
+      for (let item of lista) {
+        let li = document.createElement('li');
+        li.innerHTML = item;
+        ul.appendChild(li);
+      }
+      document.querySelector('.right-content').appendChild('ul');
     </script>
   </body>
 </html>
