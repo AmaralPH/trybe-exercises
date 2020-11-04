@@ -50,3 +50,37 @@ function criaBotao(string) {
 }
 
 criaBotao('Feriados')
+
+
+// Execício 3
+
+const botaoFeriado = document.querySelector('#btn-holiday');
+botaoFeriado.addEventListener('click', function() {
+    const listaFeriados = document.querySelectorAll('.holiday');
+    
+    for (let feridado of listaFeriados) {
+        feridado.style.backgroundColor = 'yellow';
+        feridado.style.border = 'solid'
+    }
+})
+
+botaoFeriado.addEventListener('click', function() {
+    const listaFeriados = document.querySelectorAll('.holiday');
+    
+    for (let feridado of listaFeriados) {
+        feridado.style.backgroundColor = "rgb(238,238,238)";
+        feridado.style.border = 'solid'
+    }
+})
+
+
+// Exercício 4
+
+function botaoSextou(string) {
+    const button = document.createElement('button');
+    button.id = 'btn-friday';
+    button.innerHTML = string;
+    document.querySelector('.buttons-container').appendChild(button);
+}
+
+botaoSextou('Sexta-Feira');
