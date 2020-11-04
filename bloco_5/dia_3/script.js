@@ -55,21 +55,22 @@ criaBotao('Feriados')
 // Execício 3
 
 const botaoFeriado = document.querySelector('#btn-holiday');
-botaoFeriado.addEventListener('click', function() {
-    const listaFeriados = document.querySelectorAll('.holiday');
-    
-    for (let feridado of listaFeriados) {
-        feridado.style.backgroundColor = 'yellow';
-        feridado.style.border = 'solid'
-    }
-})
 
 botaoFeriado.addEventListener('click', function() {
     const listaFeriados = document.querySelectorAll('.holiday');
-    
-    for (let feridado of listaFeriados) {
-        feridado.style.backgroundColor = "rgb(238,238,238)";
-        feridado.style.border = 'solid'
+
+    if (listaFeriados[0].style.backgroundColor == 'green') {
+        for (let feridado of listaFeriados) {
+            feridado.style.backgroundColor = 'rgb(238,238,238)';
+            feridado.style.border = null
+            feridado.style.color = '#777'
+        }
+    } else {
+        for (let feridado of listaFeriados) {
+            feridado.style.backgroundColor = 'green';
+            feridado.style.border = '0.5px solid'
+            feridado.style.color = 'black'
+        }
     }
 })
 
@@ -84,3 +85,26 @@ function botaoSextou(string) {
 }
 
 botaoSextou('Sexta-Feira');
+
+
+// Exercício 5
+
+const botaoSexta = document.querySelector('#btn-friday');
+botaoSexta.addEventListener('click', function sextou() {
+    const sextas = document.querySelectorAll('.friday');
+    const anterior = [4, 11, 18, 25];
+
+    if (sextas[0].innerHTML == 'SEXTOU') {
+        for (let i = 0; i < sextas.length; i += 1) {
+            sextas[i].innerHTML = anterior[i];
+        }
+    } else {
+        for (let dia of sextas) {
+            dia.innerHTML = "SEXTOU";
+        }
+    }
+})
+
+
+// Exercício 6
+
