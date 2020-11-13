@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    background-color: green;
+    color: white;
+    height: 50px;
+    line-height: 2;
+    position: fixed;
+    width: 98.5%;
+}
+
+.cabecalho ul {
+    display: inline;
+    margin-right: 50px;
+}
+
+.cabecalho ul li {
+    display: inline;
+    padding-left: 15px;
+}
+
+.cabecalho h2 {
+    display: inline;
+    margin-left: 30px;
+}
+
+.cabecalho input {
+    display: inline;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+
+.conteudo {
+    margin: auto;
+    padding-top: 100px;
+    width: 50%;
+}
+
+#opcoes {
+    background-color: rgb(189, 185, 185);
+    border: 1px dotted black;
+    border-radius: 10px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 15px;
+    padding-top: 10px;
+    position: fixed;
+    top: 200px;
+    width: 260px;
+}
+
+.seletor {
+    padding-bottom: 15px;
+}
+
+#tamanho-fonte {
+    display: block;
+    width: 100px;
+}
+
+#espacamento {
+    display: block;
+    width: 100px;
+}
