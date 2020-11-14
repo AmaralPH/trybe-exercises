@@ -1,0 +1,14 @@
+#descr-cargo {
+    height: 50px;
+    width: 300px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    margin: auto;
+    width: 700px;
+}
