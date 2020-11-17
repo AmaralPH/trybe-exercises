@@ -13,4 +13,39 @@ window.onload = function() {
             opcao.innerHTML = estado;
             selecionaEstado.appendChild(opcao);
         }
+
+    let data = document.getElementById('input-data');
+
+    let enviar = document.querySelector('.enviar');
+    enviar.addEventListener('click', function(evt){
+        evt.preventDefault();
+    }, false);
+
+    let saida = document.createElement('div');
+    saida.className = 'div-saida'
+    let body = document.querySelector('body');
+    let listaDeDados = document.getElementsByClassName('input');
+    //let enviar = document.querySelector('.enviar')
+    enviar.addEventListener('click', function() {
+        saida.innerHTML = '';
+        for (let elemento of listaDeDados) {
+            if (elemento.value.length == 0) {
+                return;
+            }
+            if (elemento.checked) {
+                saida.innerHTML += elemento.id + " ";
+            } else if (elemento.name != 'moradia') {
+                saida.innerHTML += elemento.value + " ";
+            }
+        }
+        body.appendChild(saida);
+    })
+
+    let limpar = document.querySelector('#limpar');
+    limpar.addEventListener('click', function() {
+        saida.innerHTML = '';
+        for (let elemento of listaDeDados) {
+            elemento.value = null;
+        }
+    })
 }

@@ -11,52 +11,59 @@
     <form action="" method="get">
         <fieldset>
             <label for="input-nome">Nome: <br>
-                <input type="text" maxlength="40" name="nome" id="input-nome" required>
+                <input type="text" class="input" maxlength="40" name="nome" id="input-nome" required>
             </label>
             <br>
             <label for="input-email">E-mail: <br>
-                <input type="text" maxlength="50" name="email" id="input-email" required>
+                <input type="text" class="input" maxlength="50" name="email" id="input-email" required>
             </label>
             <br>
             <label for="">CPF: <br>
-                <input type="text" maxlength="11" name="cpf" id="input-cpf" required>
+                <input type="text" class="input" maxlength="11" name="cpf" id="input-cpf" required>
             </label>
             <br>
             <label for="input-endereco">Endereço: <br>
-                <input type="text" maxlength="200" name="endereco" id="input-endereco" required>
+                <input type="text" class="input" maxlength="200" name="endereco" id="input-endereco" required>
             </label>
             <br>
             <label for="input-cidade">Cidade: <br>
-                <input type="text" maxlength="28" name="cidade" id="input-cidade">
+                <input type="text" class="input" maxlength="28" name="cidade" id="input-cidade">
             </label>
             <br>
             <label for="seleciona-estado">Estado: <br>
-                <select name="estado" id="seleciona-estado" required></select>
+                <select name="estado" class="input" id="seleciona-estado" required></select>
             </label>
             <br>
             <p>Tipo de moradia:</p>
             <div>
                 <label for="casa">
-                    <input type="radio" name="moradia" id="casa" required>Casa
+                    <input type="radio" class="input" name="moradia" id="casa" required>Casa
                 </label>
                 <label for="apartamento">
-                    <input type="radio" name="moradia" id="apartamento" required>Apartamento
+                    <input type="radio" class="input" name="moradia" id="apartamento" required>Apartamento
                 </label>
             </div>
         </fieldset>
         <fieldset>
             <label for="texto-curriculo">Resumo do curriculo: <br>
-                <textarea name="curriculo" id="texto-curriculo" cols="40" rows="10" maxlength="1000" 
+                <textarea name="curriculo" class="input" id="texto-curriculo" cols="40" rows="10" maxlength="1000" 
                 placeholder="Conte como foi sua carreira até aqui..." required></textarea>
             </label>
             <br>
             <label for="input-cargo">Cargo: <br>
-                <input type="text" name="cargo" id="input-cargo" required>
+                <input type="text" class="input" name="cargo" id="input-cargo" required>
             </label>
             <br>
             <label for="descr-cargo">Descrição do cargo: <br>
-                <input type="text" name='descricao' id="descr-cargo" maxlength="500" required>
+                <input type="text" class="input" name='descricao' id="descr-cargo" maxlength="500" required>
             </label>
+            <br>
+            <label for="input-data">Data de inicio: <br>
+                <input type="date" class="input" required>
+            </label>
+            <br>
+            <button type="submit" class="enviar">Enviar</button>
+            <button id="limpar">Limpar</button>
         </fieldset>
     </form>
     <script src="script.js"></script>
