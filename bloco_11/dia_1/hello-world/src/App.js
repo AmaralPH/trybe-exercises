@@ -5,9 +5,9 @@ const taskList = ['Lavar a louça', 'Andar de bike', 'Terminar projeto', 'Ler 1h
 
 const task = (value) => {
   return (
-    value.map((tarefa) => {
+    <ul> { value.map((tarefa) => {
       return <li>{tarefa}</li>
-    })
+    }) } </ul>
   );
 }
 
