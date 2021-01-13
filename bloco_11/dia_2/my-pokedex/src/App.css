@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+ul {
+  list-style: none;
+}
+
+.pokemonCard {
+  border: 1px black solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin: 15px;
+  width: 30%;
+}
+
+.pokemonList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
