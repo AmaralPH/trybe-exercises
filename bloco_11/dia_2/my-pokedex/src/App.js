@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import data from './data';
 import Pokedex from './Pokedex';
@@ -12,9 +11,8 @@ class App extends React.Component {
       <div className="App">
         <h1>Pokedex</h1>
         <div className="pokemonList">
-          {console.log(data)}
-          {data.map((pokemon) => {
-            return <Pokedex pokemon={pokemon}/>
+          {data.map((pokemon, index) => {
+            return <Pokedex pokemon={pokemon} key={pokemon+index}/>
           })}
         </div>
       </div>

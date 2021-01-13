@@ -53,5 +53,18 @@ ul {
 .pokemonList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+  .pokemonCard {
+    width: 46%;
+  }
+}
+
+@media only screen and (max-width: 814px) {
+  .pokemonCard {
+    width: 100%;
+  }
 }
