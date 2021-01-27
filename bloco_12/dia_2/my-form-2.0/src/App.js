@@ -23,6 +23,7 @@ class App extends React.Component {
         endereco: '',
         cidade: '',
         estado: 'Acre (AC)',
+        moradia: '',
         cargo: '',
         resumo: '',
         jobDescription: '',
@@ -59,13 +60,19 @@ class App extends React.Component {
     }
   }
 
-  clicou({ target }) {
+  clicou(event) {
+    event.preventDefault();
     return (
-      target.nextSibling.innerHTML = `Nome: ${this.state.nome} // Email: ${this.state.email} //
-      CPF: ${this.state.CPF} // Endereço: ${this.state.endereco} // Cidade: ${this.state.cidade} //
-      Estado: ${this.state.estado} // Moradia: casa // Resumo do Currículo: ${this.state.resumo} //
-      Cargo: ${this.state.cargo} // Descrição do Cargo: ${this.state.jobDescription}`
+      event.target.nextSibling.innerHTML = `Nome: ${this.state.nome}  / /  Email: ${this.state.email}  / / 
+      CPF: ${this.state.CPF}  / /  Endereço: ${this.state.endereco}  / /  Cidade: ${this.state.cidade}  / / 
+      Estado: ${this.state.estado}  / /  Moradia: ${this.state.moradia}  / /  Resumo do Currículo: ${this.state.resumo}  / / 
+      Cargo: ${this.state.cargo}  / /  Descrição do Cargo: ${this.state.jobDescription}`
     );
+  }
+
+  testaEmail = ({ target }) => {
+    target.value = target.value.replace(/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i, '');
+    this.setState({email: target.value})
   }
 
   render() {
@@ -77,6 +84,7 @@ class App extends React.Component {
           removeSpecial={this.removeSpecial}
           handleChange={this.handleChange}
           noNumber={this.noNumber}
+          testaEmail={this.testaEmail}
         />
         <UltimoEmprego handleChange={this.handleChange} alerta={this.alerta} />
         <BotaoFinal clicou={this.clicou} />

@@ -2,7 +2,7 @@ import React from 'react';
 
 class InformacoesBasicas extends React.Component {
     render() {
-        const { handleChange, estados, capsLock, removeSpecial, noNumber } = this.props;
+        const { handleChange, estados, capsLock, removeSpecial, noNumber, testaEmail } = this.props;
 
         return (
             <fieldset className="dados">
@@ -15,17 +15,12 @@ class InformacoesBasicas extends React.Component {
                     maxLength="40"
                     required
                 />
-                {/* <Input dados={ {name:"nome",
-                    className:"nome",
-                    type:"text",
-                    maxLength:"40"} }
-                /> */}
                 Email:
                 <input
                     name="email"
                     className="email"
                     type="text"
-                    onChange={handleChange}
+                    onChange={handleChange, testaEmail}
                     maxLength="50"
                     required
                 />
@@ -67,10 +62,10 @@ class InformacoesBasicas extends React.Component {
                     {estados.map((estado) => <option key={estado}>{estado}</option>)}
                 </select>
                 <label htmlFor="casa">
-                    <input value="casa" name="moradia" className="moradia" type="radio" />
+                    <input value="casa" name="moradia" className="moradia" type="radio" onChange={handleChange} />
                 Casa</label>
                 <label htmlFor="apartamento">
-                    <input value="apartamento" name="moradia" className="moradia" type="radio" />
+                    <input value="apartamento" name="moradia" className="moradia" onChange={handleChange} type="radio" />
                 Apartamento</label>
             </fieldset>  
         );
