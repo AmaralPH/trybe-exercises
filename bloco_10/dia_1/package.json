@@ -1,0 +1,12 @@
+{
+  "name": "dia_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicio01.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
