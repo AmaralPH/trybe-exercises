@@ -62,5 +62,5 @@ describe('Faz testes usando mock', () => {
         math.subtrair.mockRestore();
         math.subtrair.mockImplementation((a, b) => a - b);
         expect(math.subtrair(10, 5)).toBe(5);
-    })
+    });
 })
